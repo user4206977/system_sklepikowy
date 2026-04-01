@@ -67,4 +67,4 @@ Projekt realizowany jest z wykorzystaniem:
 
 ## 📢 Uwagi
 
-To README ma charakter wstępny i będzie rozwijane wraz z postępem prac nad projektem.
+To README ma charakter wstępny i będzie rozwijane wraz z postępem prac nad projektem. 
