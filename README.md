@@ -43,7 +43,7 @@ Główne cele aplikacji:
 ## 📅 Status projektu
 
 🔧 Projekt w trakcie realizacji  
-📌 Aktualna faza: planowanie / implementacja podstawowych funkcji  
+📌 Aktualna faza: rozpoczęcie implementacji funkcji projektu
 
 ---
 
