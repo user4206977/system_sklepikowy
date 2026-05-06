@@ -1,7 +1,7 @@
 <?php
 // register.php
 require_once 'includes/db.php';
-include 'includes/header.php'; // Tutaj startuje sesja i nagłówek strony
+include 'includes/header.php';
 
 $message = '';
 
