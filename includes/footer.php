@@ -13,6 +13,12 @@
         const input = document.getElementById('cartJSONInput');
         const list = document.getElementById('cartItemsList');
         const totalLabel = document.getElementById('cartTotalLabel');
+
+        if(badge) {
+            badge.innerText = cart.length;
+            badge.classList.add('cart-bounce');
+            setTimeout(() => badge.classList.remove('cart-bounce'), 400);
+        }
  
 </body>
 </html>
