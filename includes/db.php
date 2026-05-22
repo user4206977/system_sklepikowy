@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // includes/db.php
 $host = 'localhost';
