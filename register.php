@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // register.php
 require_once 'includes/db.php';
