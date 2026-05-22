@@ -116,3 +116,6 @@ function removeFromCart(index) {
 
 // Inicjalizacja przy starcie
 updateUI();
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    let t = e.target.value.toLowerCase();
