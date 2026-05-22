@@ -108,3 +108,8 @@ function addToCart(id, name, price, event) {
         icon.className = originalIcon;
     }, 800);
 }
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateUI();
+}
