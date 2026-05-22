@@ -49,3 +49,17 @@ include 'includes/header.php';
     </div>
     <?php endwhile; ?>
 </div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function updateUI() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Licznik w menu
+    const badge = document.getElementById('cartBadge');
+    if(badge) badge.innerText = cart.length;
+
+    // Pole ukryte w formularzu modala
+    const input = document.getElementById('cartJSONInput');
+    if(input) input.value = JSON.stringify(cart);
