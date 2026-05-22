@@ -119,3 +119,7 @@ updateUI();
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
     let t = e.target.value.toLowerCase();
+        document.querySelectorAll('.product-item').forEach(i => {
+        i.style.display = i.dataset.name.includes(t) ? 'block' : 'none';
+    });
+});
