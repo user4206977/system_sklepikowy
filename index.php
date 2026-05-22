@@ -82,6 +82,20 @@ function updateUI() {
     document.getElementById('cartItemsList').innerHTML = html || "<p class='text-center text-muted'>Twój koszyk jest pusty...</p>";
     document.getElementById('cartTotalLabel').innerText = total.toFixed(2) + " zł";
 }
+
+function addToCart(id, name, price, event) {
+    // 1. Logika dodawania do tablicy
+    cart.push({id, name, price});
+    updateUI();
+
+    // 2. ANIMACJA PRZYCISKU
+    // Pobieramy przycisk, kt贸ry zosta艂 klikni臋ty
+    const btn = event.currentTarget;
+    const icon = btn.querySelector('i');
+    
+    // Zapami臋tujemy pierwotne klasy, aby do nich wr贸ci膰
+    const originalBg = btn.classList.contains('btn-primary') ? 'btn-primary' : 'btn-danger';
+    const originalIcon = icon.className;
 =======
 <?php 
 require_once 'includes/db.php';
