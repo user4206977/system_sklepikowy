@@ -101,3 +101,10 @@ function addToCart(id, name, price, event) {
     btn.classList.remove(originalBg);
     btn.classList.add('btn-success');
     icon.className = 'bi bi-check-lg';
+
+    setTimeout(() => {
+        btn.classList.remove('btn-success');
+        btn.classList.add(originalBg);
+        icon.className = originalIcon;
+    }, 800);
+}
