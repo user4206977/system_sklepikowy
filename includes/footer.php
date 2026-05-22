@@ -8,6 +8,11 @@
 <script>
     // Globalna funkcja do aktualizacji UI (licznik i modal)
     function updateGlobalUI() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const badge = document.getElementById('cartBadge');
+        const input = document.getElementById('cartJSONInput');
+        const list = document.getElementById('cartItemsList');
+        const totalLabel = document.getElementById('cartTotalLabel');
  
 </body>
 </html>
