@@ -19,6 +19,8 @@
             badge.classList.add('cart-bounce');
             setTimeout(() => badge.classList.remove('cart-bounce'), 400);
         }
+
+        if(input) input.value = JSON.stringify(cart);
  
 </body>
 </html>
