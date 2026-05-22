@@ -95,7 +95,7 @@ function addToCart(id, name, price, event) {
     
     // Zapami臋tujemy pierwotne klasy, aby do nich wr贸ci膰
     const originalBg = btn.classList.contains('btn-primary') ? 'btn-primary' : 'btn-danger';
-    const originalIcon = icon.className; 
+    const originalIcon = icon.className;
 =======
 <?php 
 require_once 'includes/db.php';
