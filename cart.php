@@ -1,3 +1,8 @@
+<?php
+require_once 'includes/db.php';
+include 'includes/header.php';
+
+
 <h2>Twój Koszyk</h2>
 <div id="cartContents" class="list-group mb-4">
     </div>
