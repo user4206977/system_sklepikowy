@@ -70,3 +70,6 @@ function removeItem(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
+
+    const badge = document.getElementById('cart-count');
+    if(badge) {
