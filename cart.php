@@ -8,3 +8,5 @@
         <input type="hidden" name="cart_data" id="cartDataInput">
         <button type="button" onclick="submitOrder()" class="btn btn-success btn-lg w-100 mt-3">Złóż zamówienie i odbierz w sklepiku</button>
     </form>
+    <button onclick="clearCart()" class="btn btn-outline-danger btn-sm mt-2">Wyczyść koszyk</button>
+</div>
