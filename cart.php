@@ -77,3 +77,8 @@ function removeItem(index) {
         badge.innerText = cart.length;
     }
 }
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    renderCart();
+}
