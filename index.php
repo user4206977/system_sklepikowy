@@ -115,9 +115,13 @@ function removeFromCart(index) {
 
 updateUI();
 
+// Szukanie
 document.getElementById('searchInput').addEventListener('input', (e) => {
     let t = e.target.value.toLowerCase();
-        document.querySelectorAll('.product-item').forEach(i => {
+    document.querySelectorAll('.product-item').forEach(i => {
         i.style.display = i.dataset.name.includes(t) ? 'block' : 'none';
     });
 });
+</script>
+
+<?php include 'includes/footer.php'; ?>
