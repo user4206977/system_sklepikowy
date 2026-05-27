@@ -27,3 +27,6 @@ $myOrders = $stmt->fetchAll();
                     <th>Suma</th>
                     <th>Status</th>
                 </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($myOrders as $order): ?>
