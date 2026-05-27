@@ -41,3 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
     </form>
     <button onclick="clearCart()" class="btn btn-outline-danger btn-sm mt-2">Wyczyść koszyk</button>
 </div>
+
+<script>
+function renderCart() {
