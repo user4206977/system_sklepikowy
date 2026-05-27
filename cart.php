@@ -82,3 +82,6 @@ function clearCart() {
     localStorage.removeItem('cart');
     renderCart();
 }
+
+function submitOrder() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
