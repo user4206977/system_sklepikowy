@@ -60,3 +60,7 @@ function renderCart() {
                 ${item.name} - ${item.price} zł
                 <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Usuń</button>
             </div>`;
+    });
+    document.getElementById('totalPrice').innerText = total.toFixed(2);
+    document.getElementById('cartDataInput').value = JSON.stringify(cart);
+}
