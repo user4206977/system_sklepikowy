@@ -21,3 +21,9 @@ $myOrders = $stmt->fetchAll();
     <div class="table-responsive">
         <table class="table table-bordered shadow-sm">
             <thead class="table-light">
+                <tr>
+                    <th>Nr zamówienia</th>
+                    <th>Data</th>
+                    <th>Suma</th>
+                    <th>Status</th>
+                </tr>
