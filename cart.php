@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
     <h4>Suma: <span id="totalPrice">0.00</span> zł</h4>
     <form id="orderForm" method="POST">
         <input type="hidden" name="cart_data" id="cartDataInput">
-        <button type="button" onclick="submitOrder()" Złóż zamówienie i odbierz w sklepiku</button>
+        <button type="button" onclick="submitOrder()" class="btn btn-success btn-lg w-100 mt-3">Złóż zamówienie i odbierz w sklepiku</button>
     </form>
     <button onclick="clearCart()" class="btn btn-outline-danger btn-sm mt-2">Wyczyść koszyk</button>
 </div>
