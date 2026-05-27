@@ -14,3 +14,5 @@ $myOrders = $stmt->fetchAll();
 ?>
 
 <h2 class="mb-4">Moje Zamówienia</h2>
+
+<?php if (empty($myOrders)): ?>
