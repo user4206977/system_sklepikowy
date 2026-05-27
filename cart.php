@@ -20,6 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
         $stmt->execute([$_SESSION['user_id'], $total]);
         $orderId = $pdo->lastInsertId();
 
+        $stmtItem = $pdo->prepare("INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES (?, ?, 1, ?)");
+        foreach ($cart as $item) {
+            $stmtItem->execute([$orderId, $item['id'], $item['price']]);
+        }
+        echo "<script>localStorage.removeItem('cart'); alert('Zamówienie złożone!'); window.location='index.php';</script>";
+    }
+}
+?>
+
 <h2>Twój Koszyk</h2>
 <div id="cartContents" class="list-group mb-4">
     </div>
