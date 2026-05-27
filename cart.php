@@ -2,6 +2,11 @@
 require_once 'includes/db.php';
 include 'includes/header.php';
 
+if (!isset($_SESSION['user_id'])) {
+    echo "<div class='alert alert-warning'>Musisz się <a href='login.php'>zalogować</a>, aby złożyć zamówienie.</div>";
+    include 'includes/footer.php';
+    exit;
+}
 
 <h2>Twój Koszyk</h2>
 <div id="cartContents" class="list-group mb-4">
