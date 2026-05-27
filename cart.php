@@ -8,6 +8,10 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+// Obsługa zapisu zamówienia do bazy
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
+    $cart = json_decode($_POST['cart_data'], true);
+
 <h2>Twój Koszyk</h2>
 <div id="cartContents" class="list-group mb-4">
     </div>
