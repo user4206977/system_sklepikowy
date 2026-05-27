@@ -75,3 +75,5 @@ function removeItem(index) {
     if(badge) {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         badge.innerText = cart.length;
+    }
+}
