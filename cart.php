@@ -55,3 +55,5 @@ function renderCart() {
 
     cart.forEach((item, index) => {
         total += item.price;
+        container.innerHTML += `
+            <div class="list-group-item d-flex justify-content-between align-items-center">
