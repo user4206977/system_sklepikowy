@@ -44,3 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
 
 <script>
 function renderCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let container = document.getElementById('cartContents');
+    let total = 0;
+    container.innerHTML = '';
