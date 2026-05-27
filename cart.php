@@ -57,3 +57,6 @@ function renderCart() {
         total += item.price;
         container.innerHTML += `
             <div class="list-group-item d-flex justify-content-between align-items-center">
+                ${item.name} - ${item.price} zł
+                <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Usuń</button>
+            </div>`;
