@@ -18,3 +18,5 @@ $myOrders = $stmt->fetchAll();
 <?php if (empty($myOrders)): ?>
     <div class="alert alert-info">Nie masz jeszcze żadnych zamówień.</div>
 <?php else: ?>
+    <div class="table-responsive">
+        <table class="table table-bordered shadow-sm">
