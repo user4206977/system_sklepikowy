@@ -64,3 +64,5 @@ function renderCart() {
     document.getElementById('totalPrice').innerText = total.toFixed(2);
     document.getElementById('cartDataInput').value = JSON.stringify(cart);
 }
+
+function removeItem(index) {
