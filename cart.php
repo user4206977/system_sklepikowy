@@ -66,3 +66,5 @@ function renderCart() {
 }
 
 function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart.splice(index, 1);
