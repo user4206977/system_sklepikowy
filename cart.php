@@ -48,3 +48,7 @@ function renderCart() {
     let container = document.getElementById('cartContents');
     let total = 0;
     container.innerHTML = '';
+
+    if (cart.length === 0) {
+        container.innerHTML = '<p class="text-muted">Koszyk jest pusty.</p>';
+    }
