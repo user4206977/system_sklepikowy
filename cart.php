@@ -73,3 +73,5 @@ function removeItem(index) {
 
     const badge = document.getElementById('cart-count');
     if(badge) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        badge.innerText = cart.length;
