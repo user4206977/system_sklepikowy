@@ -20,3 +20,4 @@ $myOrders = $stmt->fetchAll();
 <?php else: ?>
     <div class="table-responsive">
         <table class="table table-bordered shadow-sm">
+            <thead class="table-light">
