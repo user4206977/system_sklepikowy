@@ -113,7 +113,6 @@ function removeFromCart(index) {
     updateUI();
 }
 
-// Inicjalizacja przy starcie
 updateUI();
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
