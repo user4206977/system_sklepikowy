@@ -30,3 +30,5 @@ $myOrders = $stmt->fetchAll();
             </thead>
             <tbody>
                 <?php foreach ($myOrders as $order): ?>
+                <tr>
+                    <td>#<?= $order['id'] ?></td>
