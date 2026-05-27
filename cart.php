@@ -16,8 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
         $total = 0;
         foreach($cart as $item) $total += $item['price'];
 
-
-
+        $stmt = $pdo->prepare("INSERT INTO orders (user_id, total_price, status) VALUES (?, ?, 'oczekujące')");
+        $stmt->execute([$_SESSION['user_id'], $total]);
+        $orderId = $pdo->lastInsertId();
 
 <h2>Twój Koszyk</h2>
 <div id="cartContents" class="list-group mb-4">
