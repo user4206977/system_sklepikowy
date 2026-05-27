@@ -12,3 +12,5 @@ $stmt = $pdo->prepare("SELECT * FROM orders WHERE user_id = ? ORDER BY created_a
 $stmt->execute([$userId]);
 $myOrders = $stmt->fetchAll();
 ?>
+
+<h2 class="mb-4">Moje Zamówienia</h2>
