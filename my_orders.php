@@ -32,3 +32,4 @@ $myOrders = $stmt->fetchAll();
                 <?php foreach ($myOrders as $order): ?>
                 <tr>
                     <td>#<?= $order['id'] ?></td>
+                    <td><?= date('d.m.Y H:i', strtotime($order['created_at'])) ?></td>
