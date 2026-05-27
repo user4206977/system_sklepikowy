@@ -52,3 +52,6 @@ function renderCart() {
     if (cart.length === 0) {
         container.innerHTML = '<p class="text-muted">Koszyk jest pusty.</p>';
     }
+
+    cart.forEach((item, index) => {
+        total += item.price;
