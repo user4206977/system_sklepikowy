@@ -124,4 +124,4 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 });
 </script>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?> 
