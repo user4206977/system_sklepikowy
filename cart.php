@@ -85,3 +85,6 @@ function clearCart() {
 
 function submitOrder() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) return alert('Koszyk jest pusty!');
+    document.getElementById('orderForm').submit();
+}
