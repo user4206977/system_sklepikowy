@@ -79,5 +79,11 @@ $logged = isset($_SESSION['user_id']);
                     <h5 class="fw-bold"><i class="bi bi-cart3 me-2"></i>Twój Koszyk</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-
+                <div class="modal-body" id="cartItemsList">
+                    </div>
+                <div class="modal-footer border-0">
+                    <div class="d-flex justify-content-between w-100 mb-3">
+                        <span class="fw-bold">Razem:</span>
+                        <span class="fw-bold text-primary" id="cartTotalLabel">0.00 zł</span>
+                    </div>
     <div class="container mt-4">
