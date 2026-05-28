@@ -86,4 +86,13 @@ $logged = isset($_SESSION['user_id']);
                         <span class="fw-bold">Razem:</span>
                         <span class="fw-bold text-primary" id="cartTotalLabel">0.00 zł</span>
                     </div>
+                    <form action="/cart.php" method="POST" class="w-100">
+                        <input type="hidden" name="cart_data" id="cartJSONInput">
+                        <button type="submit" class="btn btn-primary w-100 btn-rounded fw-bold py-2">ZŁÓŻ ZAMÓWIENIE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container mt-4">
