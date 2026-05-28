@@ -20,6 +20,8 @@
         }
 
         if(input) input.value = JSON.stringify(cart);
- 
-</body>
-</html>
+
+        if(list) {
+            let html = "";
+            let total = 0;
+            cart.forEach((item, index) => {
