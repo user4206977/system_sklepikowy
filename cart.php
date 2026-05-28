@@ -77,6 +77,7 @@ function removeItem(index) {
     }
 }
 
+// Czyszczenie koszyka po złożeniu zamówienia lub ręcznie
 function clearCart() {
     localStorage.removeItem('cart');
     renderCart();
