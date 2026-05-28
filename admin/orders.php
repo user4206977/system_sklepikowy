@@ -94,4 +94,4 @@ const lastCheck = new Date().toLocaleTimeString();
 console.log("Ostatnie sprawdzenie zamówień: " + lastCheck);
 </script>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?> 
