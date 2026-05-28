@@ -34,3 +34,9 @@ include '../includes/header.php';
                 <th>Akcja</th>
             </tr>
         </thead>
+        <tbody>
+            <?php foreach($orders as $o): ?>
+            <tr>
+                <td><strong>#<?= $o['id'] ?></strong><br><small class="text-muted"><?= $o['created_at'] ?></small></td>
+                <td><?= htmlspecialchars($o['email']) ?></td>
+                <td>
