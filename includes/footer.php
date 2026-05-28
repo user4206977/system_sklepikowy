@@ -38,3 +38,5 @@
             if(totalLabel) totalLabel.innerText = total.toFixed(2) + " zł";
         }
     }
+    
+    document.addEventListener('DOMContentLoaded', updateGlobalUI);
