@@ -32,4 +32,9 @@
                         <span class="fw-bold">${item.name}</span><br>
                         <small class="text-muted">${parseFloat(item.price).toFixed(2)} zł</small>
                     </div>
-                </div>`;
+                </div>`;\
+            });
+            list.innerHTML = html || "<p class='text-center text-muted'>Koszyk jest pusty</p>";
+            if(totalLabel) totalLabel.innerText = total.toFixed(2) + " zł";
+        }
+    }
