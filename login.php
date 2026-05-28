@@ -12,14 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute(['email' => $email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Weryfikacja zahashowanego hasła
     if ($user && password_verify($password, $user['password_hash'])) {
-        // Utrzymanie sesji (wymóg projektu)
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['role'] = $user['role'];
         $_SESSION['email'] = $user['email'];
         
-        // Przekierowanie za pomocą skryptu, aby uniknąć problemów z header()
         echo "<script>window.location='/index.php';</script>";
         exit;
     } else {
