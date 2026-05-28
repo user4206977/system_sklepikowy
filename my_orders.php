@@ -40,3 +40,7 @@ $myOrders = $stmt->fetchAll();
                         if ($order['status'] == 'oczekujące') $statusClass = 'bg-warning text-dark';
                         if ($order['status'] == 'gotowe') $statusClass = 'bg-success';
                         if ($order['status'] == 'w realizacji') $statusClass = 'bg-info text-dark';
+                        ?>
+                        <span class="badge <?= $statusClass ?>"><?= strtoupper($order['status']) ?></span>
+                    </td>
+                </tr>
