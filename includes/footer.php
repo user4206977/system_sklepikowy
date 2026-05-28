@@ -25,3 +25,11 @@
             let html = "";
             let total = 0;
             cart.forEach((item, index) => {
+                total += parseFloat(item.price);
+                html += `
+                <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded-3">
+                    <div>
+                        <span class="fw-bold">${item.name}</span><br>
+                        <small class="text-muted">${parseFloat(item.price).toFixed(2)} zł</small>
+                    </div>
+                </div>`;
