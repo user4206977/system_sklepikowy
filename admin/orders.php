@@ -79,3 +79,8 @@ include '../includes/header.php';
                         <button name="update_status" class="btn btn-sm btn-primary">Zmień</button>
                     </form>
                 </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
