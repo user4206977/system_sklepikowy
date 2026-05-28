@@ -34,3 +34,6 @@ $myOrders = $stmt->fetchAll();
                     <td>#<?= $order['id'] ?></td>
                     <td><?= date('d.m.Y H:i', strtotime($order['created_at'])) ?></td>
                     <td><?= $order['total_price'] ?> zł</td>
+                    <td>
+                        <?php 
+                        $statusClass = 'bg-secondary';
