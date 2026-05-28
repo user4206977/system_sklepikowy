@@ -44,3 +44,8 @@ $myOrders = $stmt->fetchAll();
                         <span class="badge <?= $statusClass ?>"><?= strtoupper($order['status']) ?></span>
                     </td>
                 </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+<?php endif; ?>
