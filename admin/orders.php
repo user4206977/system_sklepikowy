@@ -57,3 +57,13 @@ include '../includes/header.php';
                         <?php endforeach; ?>
                     </ul>
                 </td>
+                <td class="fw-bold"><?= number_format($o['total_price'], 2) ?> zł</td>
+                <td>
+                    <?php 
+                        $badgeClass = 'bg-warning text-dark';
+                        if($o['status'] == 'gotowe') $badgeClass = 'bg-success';
+                        if($o['status'] == 'w realizacji') $badgeClass = 'bg-info';
+                        if($o['status'] == 'odebrane') $badgeClass = 'bg-secondary';
+                    ?>
+                    <span class="badge <?= $badgeClass ?>"><?= strtoupper($o['status']) ?></span>
+                </td>
