@@ -50,7 +50,33 @@ include 'includes/header.php';
 <h4 class="fw-bold mb-4">Pełna Oferta</h4>
 <div class="row g-4 mb-5">
     <?php 
-
+    $query = $logged ? "SELECT * FROM products WHERE is_promoted = 0" : "SELECT * FROM products";
+    $stmt = $pdo->query($query);
+    
+    while($p = $stmt->fetch()): 
+        $is_available = !isset($p['is_available']) || $p['is_available'];
+    ?>
+    <div class="col-6 col-md-3 product-item" data-name="<?= strtolower($p['name']) ?>">
+        <div class="card h-100 product-card shadow-sm border-0 <?= $is_available ? 'bg-white' : 'bg-light opacity-75' ?>" <?= !$is_available ? 'style="filter: grayscale(0.4);"' : '' ?>>
+            <div class="card-body p-4 text-center">
+                <h6 class="fw-bold mb-3 <?= $is_available ? '' : 'text-muted text-decoration-line-through' ?>"><?= $p['name'] ?></h6>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="<?= $is_available ? 'text-primary' : 'text-muted' ?> fw-bold fs-5"><?= number_format($p['price'], 2) ?> zł</span>
+                    
+                    <?php if($is_available): ?>
+                        <button onclick="addToCart(<?= $p['id'] ?>, '<?= $p['name'] ?>', <?= $p['price'] ?>, event)" class="btn btn-primary btn-sm rounded-circle shadow-sm">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    <?php else: ?>
+                        <button class="btn btn-secondary btn-sm rounded-circle shadow-sm" disabled title="Produkt chwilowo niedostępny">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                    <?php endif; ?>
+                </div>
+                <?php if(!$is_available): ?>
+                    <div class="text-danger small mt-2 fw-bold"><i class="bi bi-exclamation-circle me-1"></i>Brak</div>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
     <?php endwhile; ?>
