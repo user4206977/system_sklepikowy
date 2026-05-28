@@ -9,7 +9,6 @@
     <style>
         :root { --main-color: #0d47a1; --accent-color: #ffc107; }
         
-        /* Sticky Footer Logic */
         html, body { height: 100%; }
         body { display: flex; flex-direction: column; background-color: #f4f7f6; font-family: 'Inter', sans-serif; }
         .content-wrapper { flex: 1 0 auto; }

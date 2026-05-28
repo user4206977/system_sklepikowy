@@ -37,3 +37,4 @@ $myOrders = $stmt->fetchAll();
                     <td>
                         <?php 
                         $statusClass = 'bg-secondary';
+                        if ($order['status'] == 'oczekujące') $statusClass = 'bg-warning text-dark';

@@ -56,11 +56,9 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function updateUI() {
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Licznik w menu
     const badge = document.getElementById('cartBadge');
     if(badge) badge.innerText = cart.length;
 
-    // Pole ukryte w formularzu modala
     const input = document.getElementById('cartJSONInput');
     if(input) input.value = JSON.stringify(cart);
 
@@ -83,20 +81,15 @@ function updateUI() {
 }
 
 function addToCart(id, name, price, event) {
-    // 1. Logika dodawania do tablicy
     cart.push({id, name, price});
     updateUI();
 
-    // 2. ANIMACJA PRZYCISKU
-    // Pobieramy przycisk, który został kliknięty
     const btn = event.currentTarget;
     const icon = btn.querySelector('i');
     
-    // Zapamimtujemy pierwotne klasy
     const originalBg = btn.classList.contains('btn-primary') ? 'btn-primary' : 'btn-danger';
     const originalIcon = icon.className;
 
-    // Zmiana na "sukces" (zielony przycisk i ptaszek)
     btn.classList.remove(originalBg);
     btn.classList.add('btn-success');
     icon.className = 'bi bi-check-lg';
@@ -115,7 +108,6 @@ function removeFromCart(index) {
 
 updateUI();
 
-// Szukanie
 document.getElementById('searchInput').addEventListener('input', (e) => {
     let t = e.target.value.toLowerCase();
     document.querySelectorAll('.product-item').forEach(i => {

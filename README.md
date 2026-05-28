@@ -35,8 +35,9 @@ Główne cele aplikacji:
 ## 👥 Autorzy projektu
 
 - Wojciech Złonkiewicz *Leader projektu*
-- Wojciech Strzezik *slave owner*
-- Maciej Strzelec *slave*
+- Maciej Strzelec *Główny wykonawca*
+- Wojciech Strzezik *just helping*
+
 
 ---
 

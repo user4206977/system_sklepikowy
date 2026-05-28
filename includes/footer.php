@@ -6,7 +6,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Globalna funkcja do aktualizacji UI (licznik i modal)
     function updateGlobalUI() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const badge = document.getElementById('cartBadge');
