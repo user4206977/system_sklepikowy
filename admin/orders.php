@@ -21,3 +21,16 @@ include '../includes/header.php';
     <h2>Zarządzanie Zamówieniami</h2>
     <span class="badge bg-primary">Panel Pracownika Sklepiku</span>
 </div>
+
+<div class="table-responsive">
+    <table class="table table-bordered bg-white shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Klient</th>
+                <th>Zawartość zamówienia (Produkty)</th>
+                <th>Suma</th>
+                <th>Status</th>
+                <th>Akcja</th>
+            </tr>
+        </thead>
