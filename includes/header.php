@@ -28,6 +28,13 @@ $logged = isset($_SESSION['user_id']);
             .navbar-collapse { background: var(--main-color); padding: 1rem; border-radius: 15px; margin-top: 10px; }
             .nav-link { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 0; }
         }
+
+        @keyframes bounceCart {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+        .cart-bounce { animation: bounceCart 0.4s ease-in-out; }
     </style>
 </head>
 <body>
