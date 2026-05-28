@@ -38,3 +38,5 @@ $myOrders = $stmt->fetchAll();
                         <?php 
                         $statusClass = 'bg-secondary';
                         if ($order['status'] == 'oczekujące') $statusClass = 'bg-warning text-dark';
+                        if ($order['status'] == 'gotowe') $statusClass = 'bg-success';
+                        if ($order['status'] == 'w realizacji') $statusClass = 'bg-info text-dark';
