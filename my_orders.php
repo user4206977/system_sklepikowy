@@ -49,3 +49,5 @@ $myOrders = $stmt->fetchAll();
         </table>
     </div>
 <?php endif; ?>
+
+<?php include 'includes/footer.php'; ?>
