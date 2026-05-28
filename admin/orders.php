@@ -84,3 +84,14 @@ include '../includes/header.php';
         </tbody>
     </table>
 </div>
+
+<script>
+setTimeout(function(){
+   window.location.reload();
+}, 30000); 
+
+const lastCheck = new Date().toLocaleTimeString();
+console.log("Ostatnie sprawdzenie zamówień: " + lastCheck);
+</script>
+
+<?php include '../includes/footer.php'; ?>
