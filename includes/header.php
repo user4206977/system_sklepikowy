@@ -13,6 +13,7 @@ $logged = isset($_SESSION['user_id']);
     <style>
         :root { --main-color: #0d47a1; --accent-color: #ffc107; }
         
+        /* Sticky Footer Logic */
         html, body { height: 100%; }
         body { display: flex; flex-direction: column; background-color: #f4f7f6; font-family: 'Inter', sans-serif; }
         .content-wrapper { flex: 1 0 auto; }
@@ -23,12 +24,14 @@ $logged = isset($_SESSION['user_id']);
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .promo-tag { background: #d32f2f; color: white; padding: 5px 15px; border-radius: 0 0 0 20px; position: absolute; top: 0; right: 0; font-size: 0.75rem; font-weight: bold; z-index: 10; }
         .btn-rounded { border-radius: 50px; }
-
+        
+        /* Poprawka mobilna dla menu */
         @media (max-width: 991.98px) {
             .navbar-collapse { background: var(--main-color); padding: 1rem; border-radius: 15px; margin-top: 10px; }
             .nav-link { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 0; }
         }
 
+        /* Animacja koszyka */
         @keyframes bounceCart {
             0% { transform: scale(1); }
             50% { transform: scale(1.4); }
@@ -62,6 +65,13 @@ $logged = isset($_SESSION['user_id']);
                                 </ul>
                             </div>
                         <?php endif; ?>
+                        
+                        <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <div class="position-relative d-inline-block">
+                                <i class="bi bi-cart3 fs-4"></i>
+                                <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
+                            </div>
+                        </a>
                         
                         <a href="/logout.php" class="btn btn-sm btn-outline-light btn-rounded mt-2 mt-lg-0 ms-lg-3 px-3">Wyloguj</a>
                     <?php else: ?>
