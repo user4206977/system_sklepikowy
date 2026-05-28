@@ -1,3 +1,7 @@
+<?php 
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
+$logged = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
