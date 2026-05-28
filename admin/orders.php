@@ -40,3 +40,20 @@ include '../includes/header.php';
                 <td><strong>#<?= $o['id'] ?></strong><br><small class="text-muted"><?= $o['created_at'] ?></small></td>
                 <td><?= htmlspecialchars($o['email']) ?></td>
                 <td>
+                    <ul class="list-unstyled mb-0">
+                        <?php
+                        // Pobieranie szczegółów produktów dla tego konkretnego zamówienia
+                        $stmtItems = $pdo->prepare("
+                            SELECT oi.quantity, p.name 
+                            FROM order_items oi 
+                            JOIN products p ON oi.product_id = p.id 
+                            WHERE oi.order_id = ?
+                        ");
+                        $stmtItems->execute([$o['id']]);
+                        $items = $stmtItems->fetchAll();
+                        
+                        foreach($items as $item): ?>
+                            <li><i class="bi bi-check2-short"></i> <?= $item['quantity'] ?>x <strong><?= $item['name'] ?></strong></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </td>
