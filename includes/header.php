@@ -72,4 +72,12 @@ $logged = isset($_SESSION['user_id']);
         </div>
     </nav>
 
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius:25px; border:none; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                <div class="modal-header border-0">
+                    <h5 class="fw-bold"><i class="bi bi-cart3 me-2"></i>Twój Koszyk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
     <div class="container mt-4">
