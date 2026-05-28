@@ -17,6 +17,12 @@ $logged = isset($_SESSION['user_id']);
         body { display: flex; flex-direction: column; background-color: #f4f7f6; font-family: 'Inter', sans-serif; }
         .content-wrapper { flex: 1 0 auto; }
         footer { flex-shrink: 0; }
+
+        .navbar { background: var(--main-color) !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .product-card { transition: all 0.3s; border: none; border-radius: 20px; overflow: hidden; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .promo-tag { background: #d32f2f; color: white; padding: 5px 15px; border-radius: 0 0 0 20px; position: absolute; top: 0; right: 0; font-size: 0.75rem; font-weight: bold; z-index: 10; }
+        .btn-rounded { border-radius: 50px; }
     </style>
 </head>
 <body>
