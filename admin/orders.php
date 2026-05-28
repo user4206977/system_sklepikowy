@@ -67,3 +67,15 @@ include '../includes/header.php';
                     ?>
                     <span class="badge <?= $badgeClass ?>"><?= strtoupper($o['status']) ?></span>
                 </td>
+                <td>
+                    <form method="POST" class="d-flex gap-2">
+                        <input type="hidden" name="order_id" value="<?= $o['id'] ?>">
+                        <select name="status" class="form-select form-select-sm">
+                            <option value="oczekujące" <?= $o['status'] == 'oczekujące' ? 'selected' : '' ?>>Oczekujące</option>
+                            <option value="w realizacji" <?= $o['status'] == 'w realizacji' ? 'selected' : '' ?>>W realizacji</option>
+                            <option value="gotowe" <?= $o['status'] == 'gotowe' ? 'selected' : '' ?>>Gotowe</option>
+                            <option value="odebrane" <?= $o['status'] == 'odebrane' ? 'selected' : '' ?>>Odebrane</option>
+                        </select>
+                        <button name="update_status" class="btn btn-sm btn-primary">Zmień</button>
+                    </form>
+                </td>
