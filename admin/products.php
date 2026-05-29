@@ -88,3 +88,9 @@ include '../includes/header.php';
                 <tr>
                     <td class="ps-4 text-muted">#<?= $p['id'] ?></td>
                     <td>
+                        <div class="d-flex align-items-center">
+                            <img src="<?= htmlspecialchars($image_path) ?>" alt="img" class="rounded-circle me-3" style="width: 40px; height: 40px; object-fit: cover; border: 1px solid #ddd;">
+                            <strong class="text-dark"><?= htmlspecialchars($p['name']) ?></strong>
+                        </div>
+                    </td>
+                    <td class="fw-bold text-primary"><?= number_format($p['price'], 2) ?> zł</td>
