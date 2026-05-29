@@ -56,3 +56,9 @@ include '../includes/header.php';
             <div class="col-md-3">
                 <input type="file" name="image" class="form-control rounded-pill" accept="image/*" title="Wybierz zdjęcie produktu (opcjonalnie)">
             </div>
+            <div class="col-md-2 text-center text-md-start">
+                <div class="form-check form-switch d-inline-block mt-2">
+                    <input type="checkbox" name="promoted" class="form-check-input" id="p" value="1">
+                    <label class="form-check-label fw-bold text-danger" for="p">🔥 Promocja</label>
+                </div>
+            </div>
