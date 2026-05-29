@@ -81,3 +81,10 @@ include '../includes/header.php';
                     <th class="text-end pe-4">Akcje</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php foreach($products as $p): 
+                    $image_path = !empty($p['image']) ? '../' . $p['image'] : '../images/default.png';
+                ?>
+                <tr>
+                    <td class="ps-4 text-muted">#<?= $p['id'] ?></td>
+                    <td>
