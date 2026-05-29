@@ -65,3 +65,6 @@ include '../includes/header.php';
             <div class="col-md-2">
                 <button name="add" class="btn btn-success w-100 btn-rounded fw-bold py-2 shadow-sm">Dodaj</button>
             </div>
+        </form>
+    </div>
+</div>
