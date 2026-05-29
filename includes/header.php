@@ -45,7 +45,7 @@ $logged = isset($_SESSION['user_id']);
 <div class="content-wrapper">
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/index.php"><i class="bi bi-shop-window me-2 text-warning"></i>Zegowska Szama</a>
+            <a class="navbar-brand fw-bold" href="/index.php"><img src="logo.png" alt="Logo" class="d-inline-block align-middle me-2" style="height: 28px; width: auto;">Zegowska Szama</a>
             
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#szamaNav">
                 <span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@ $logged = isset($_SESSION['user_id']);
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" id="cartItemsList">
-                    </div>
+                </div>
                 <div class="modal-footer border-0">
                     <div class="d-flex justify-content-between w-100 mb-3">
                         <span class="fw-bold">Razem:</span>
@@ -105,4 +105,4 @@ $logged = isset($_SESSION['user_id']);
         </div>
     </div>
 
-    <div class="container mt-4"> 
+    <div class="container mt-4">
