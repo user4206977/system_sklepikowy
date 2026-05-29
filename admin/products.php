@@ -23,3 +23,7 @@ if (isset($_POST['update_status'])) {
     header("Location: products.php");
     exit;
 }
+
+if (isset($_POST['delete'])) {
+    $stmt = $pdo->prepare("DELETE FROM products WHERE id = ?");
+    $stmt->execute([$_POST['product_id']]);
