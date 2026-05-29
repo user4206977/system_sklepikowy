@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h2 class="text-center mb-4">Rejestracja</h2>
-        <?= $message ?>
+        <?= $message ?> 
         <div class="card shadow-sm">
             <div class="card-body p-4">
                 <form method="POST" action="register.php">

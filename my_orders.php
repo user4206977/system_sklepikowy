@@ -50,4 +50,4 @@ $myOrders = $stmt->fetchAll();
     </div>
 <?php endif; ?>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?> 

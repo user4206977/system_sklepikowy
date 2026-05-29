@@ -42,4 +42,4 @@
     document.addEventListener('DOMContentLoaded', updateGlobalUI);
 </script>
 </body>
-</html>
+</html> 

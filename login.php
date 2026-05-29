@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="row justify-content-center">
     <div class="col-md-6">
-        <h2 class="text-center mb-4">Logowanie</h2>
+        <h2 class="text-center mb-4">Logowanie</h2> 
         <?= $message ?>
         <div class="card shadow-sm">
             <div class="card-body p-4">

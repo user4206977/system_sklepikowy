@@ -46,7 +46,7 @@ include 'includes/header.php';
         </div>
     </div>
     <?php endwhile; ?>
-</div>
+</div> 
 <?php endif; ?>
 
 

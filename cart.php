@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart_data'])) {
             $stmtItem->execute([$orderId, $item['id'], $item['price']]);
         }
         echo "<script>localStorage.removeItem('cart'); alert('Zamówienie złożone!'); window.location='index.php';</script>";
-    }
+    } 
 }
 ?>
 

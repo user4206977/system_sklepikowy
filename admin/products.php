@@ -64,7 +64,7 @@ include '../includes/header.php';
             </div>
             <div class="col-md-2">
                 <button name="add" class="btn btn-success w-100 btn-rounded fw-bold py-2 shadow-sm">Dodaj</button>
-            </div>
+            </div> 
         </form>
     </div>
 </div>
