@@ -68,3 +68,16 @@ include '../includes/header.php';
         </form>
     </div>
 </div>
+
+<div class="card shadow-sm border-0" style="border-radius: 20px; overflow: hidden;">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0 bg-white">
+            <thead class="table-dark">
+                <tr>
+                    <th class="ps-4">ID</th>
+                    <th>Produkt</th>
+                    <th>Cena</th>
+                    <th class="text-center">Statusy (Zaznacz i zapisz)</th>
+                    <th class="text-end pe-4">Akcje</th>
+                </tr>
+            </thead>
