@@ -97,4 +97,8 @@ include '../includes/header.php';
                     <td>
                         <form method="POST" class="d-flex justify-content-center gap-4 align-items-center m-0">
                             <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
-                            
+
+                            <div class="form-check form-switch m-0">
+                                <input type="checkbox" name="is_promoted" class="form-check-input" id="promo-<?= $p['id'] ?>" <?= $p['is_promoted'] ? 'checked' : '' ?>>
+                                <label class="form-check-label small <?= $p['is_promoted'] ? 'text-danger fw-bold' : 'text-muted' ?>" for="promo-<?= $p['id'] ?>">Promocja</label>
+                            </div>
