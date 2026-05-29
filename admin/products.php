@@ -5,3 +5,7 @@ session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("<div class='container mt-5'><div class='alert alert-danger'>Brak dostępu! Musisz być administratorem.</div></div>");
 }
+
+if (isset($_POST['add'])) {
+    $stmt = $pdo->prepare("INSERT INTO products (name, price, is_promoted, is_available) VALUES (?, ?, ?, 1)");
+    $stmt->execute([$_POST['name'], $_POST['price'], isset($_POST['promoted']) ? 1 : 0]);
