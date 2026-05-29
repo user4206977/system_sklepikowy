@@ -12,3 +12,8 @@ if (isset($_POST['add'])) {
     header("Location: products.php");
     exit;
 }
+
+if (isset($_POST['update_status'])) {
+    $product_id = $_POST['product_id'];
+    $is_promoted = isset($_POST['is_promoted']) ? 1 : 0;
+    $is_available = isset($_POST['is_available']) ? 1 : 0;
