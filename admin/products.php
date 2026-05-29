@@ -129,3 +129,8 @@ include '../includes/header.php';
                 </tr>
                 <?php endif; ?>
             </tbody>
+        </table>
+    </div>
+</div>
+
+<?php include '../includes/footer.php'; ?>
