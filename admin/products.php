@@ -47,3 +47,9 @@ include '../includes/header.php';
             <div class="col-md-3">
                 <input type="text" name="name" class="form-control rounded-pill" placeholder="Nazwa (np. Zapiekanka)" required>
             </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" step="0.01" name="price" class="form-control rounded-start-pill" placeholder="Cena" required>
+                    <span class="input-group-text rounded-end-pill">zł</span>
+                </div>
+            </div>
