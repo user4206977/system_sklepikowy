@@ -121,3 +121,11 @@ include '../includes/header.php';
                             </button>
                         </form>
                     </td>
+                </tr>
+                <?php endforeach; ?>
+                <?php if(empty($products)): ?>
+                <tr>
+                    <td colspan="5" class="text-center py-4 text-muted">Brak produktów w bazie danych. Dodaj pierwszy produkt powyżej!</td>
+                </tr>
+                <?php endif; ?>
+            </tbody>
