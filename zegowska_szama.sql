@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2026 at 01:06 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Czas generowania: 29 Maj 2026, 13:00
+-- Wersja serwera: 10.4.27-MariaDB
+-- Wersja PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `zegowska_szama`
+-- Baza danych: `zegowska_szama`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Struktura tabeli dla tabeli `orders`
 --
 
 CREATE TABLE `orders` (
@@ -38,7 +38,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_items`
+-- Struktura tabeli dla tabeli `order_items`
 --
 
 CREATE TABLE `order_items` (
@@ -52,7 +52,7 @@ CREATE TABLE `order_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Struktura tabeli dla tabeli `products`
 --
 
 CREATE TABLE `products` (
@@ -60,26 +60,27 @@ CREATE TABLE `products` (
   `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `is_available` tinyint(1) DEFAULT 1,
-  `is_promoted` tinyint(1) DEFAULT 0
+  `is_promoted` tinyint(1) DEFAULT 0,
+  `image` varchar(255) DEFAULT 'images/default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `products`
+-- Zrzut danych tabeli `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `is_available`, `is_promoted`) VALUES
-(1, 'Bułka Gołosza', 6.50, 0, 1),
-(2, 'Hot Dog', 5.50, 1, 0),
-(3, 'Double Dog', 7.00, 1, 0),
-(4, 'Tymbark 0,5l', 3.50, 1, 1),
-(5, 'Kawa', 2.50, 1, 1),
-(6, 'Tosty', 3.00, 1, 0),
-(7, 'Banan', 1.00, 0, 0);
+INSERT INTO `products` (`id`, `name`, `price`, `is_available`, `is_promoted`, `image`) VALUES
+(1, 'Bułka Gołosza', '6.50', 0, 1, 'images/bulka_golosza.jpg'),
+(2, 'Hot Dog', '5.50', 1, 0, 'images/hotdog.png'),
+(3, 'Double Dog', '7.00', 1, 0, 'images/doubledog.png'),
+(4, 'Tymbark 0,5l', '3.50', 1, 1, 'images/tymbark.jpg'),
+(5, 'Kawa', '2.50', 1, 1, 'images/kawa.jpg'),
+(6, 'Tosty', '3.00', 1, 0, 'images/tosty.jpg'),
+(7, 'Banan', '1.00', 0, 0, 'images/banan.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktura tabeli dla tabeli `users`
 --
 
 CREATE TABLE `users` (
@@ -91,25 +92,25 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Zrzut danych tabeli `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password_hash`, `role`, `created_at`) VALUES
 (1, 'admin@zegowskaszama.pl', '$2y$10$ODlW9S45ss.sAOTnwE1bdOQEjAywNcEaoR6i2eWD3os8WhNqq.bXe', 'admin', '2026-04-02 17:47:32');
 
 --
--- Indexes for dumped tables
+-- Indeksy dla zrzutów tabel
 --
 
 --
--- Indexes for table `orders`
+-- Indeksy dla tabeli `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `order_items`
+-- Indeksy dla tabeli `order_items`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
@@ -117,58 +118,58 @@ ALTER TABLE `order_items`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `products`
+-- Indeksy dla tabeli `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT dla tabeli `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `order_items`
+-- AUTO_INCREMENT dla tabeli `order_items`
 --
 ALTER TABLE `order_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=381;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT dla tabeli `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Constraints for dumped tables
+-- Ograniczenia dla zrzutów tabel
 --
 
 --
--- Constraints for table `orders`
+-- Ograniczenia dla tabeli `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `order_items`
+-- Ograniczenia dla tabeli `order_items`
 --
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
