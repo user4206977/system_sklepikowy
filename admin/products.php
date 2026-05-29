@@ -113,3 +113,11 @@ include '../includes/header.php';
                             </button>
                         </form>
                     </td>
+                    <td class="text-end pe-4">
+                        <form method="POST" onsubmit="return confirm('Czy na pewno chcesz usunąć produkt: <?= htmlspecialchars($p['name']) ?>?');" class="d-inline m-0">
+                            <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
+                            <button type="submit" name="delete" class="btn btn-sm btn-danger rounded-circle p-2" title="Usuń produkt">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </form>
+                    </td>
