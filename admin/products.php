@@ -107,3 +107,9 @@ include '../includes/header.php';
                                 <input type="checkbox" name="is_available" class="form-check-input" id="avail-<?= $p['id'] ?>" <?= (!isset($p['is_available']) || $p['is_available']) ? 'checked' : '' ?>>
                                 <label class="form-check-label small <?= (!isset($p['is_available']) || $p['is_available']) ? 'text-success fw-bold' : 'text-muted' ?>" for="avail-<?= $p['id'] ?>">W sklepie</label>
                             </div>
+                            
+                            <button type="submit" name="update_status" class="btn btn-sm btn-outline-secondary rounded-pill px-2 py-0" title="Zapisz zmiany statusu">
+                                <i class="bi bi-save"></i>
+                            </button>
+                        </form>
+                    </td>
