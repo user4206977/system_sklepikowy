@@ -94,3 +94,7 @@ include '../includes/header.php';
                         </div>
                     </td>
                     <td class="fw-bold text-primary"><?= number_format($p['price'], 2) ?> zł</td>
+                    <td>
+                        <form method="POST" class="d-flex justify-content-center gap-4 align-items-center m-0">
+                            <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
+                            
