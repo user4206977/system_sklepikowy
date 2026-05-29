@@ -42,3 +42,8 @@ include '../includes/header.php';
 
 <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px;">
     <div class="card-body p-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-plus-circle me-2 text-success"></i>Dodaj nowy produkt</h5>
+        <form method="POST" enctype="multipart/form-data" class="row g-3 align-items-center">
+            <div class="col-md-3">
+                <input type="text" name="name" class="form-control rounded-pill" placeholder="Nazwa (np. Zapiekanka)" required>
+            </div>
