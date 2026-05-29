@@ -102,3 +102,8 @@ include '../includes/header.php';
                                 <input type="checkbox" name="is_promoted" class="form-check-input" id="promo-<?= $p['id'] ?>" <?= $p['is_promoted'] ? 'checked' : '' ?>>
                                 <label class="form-check-label small <?= $p['is_promoted'] ? 'text-danger fw-bold' : 'text-muted' ?>" for="promo-<?= $p['id'] ?>">Promocja</label>
                             </div>
+                            
+                            <div class="form-check form-switch m-0">
+                                <input type="checkbox" name="is_available" class="form-check-input" id="avail-<?= $p['id'] ?>" <?= (!isset($p['is_available']) || $p['is_available']) ? 'checked' : '' ?>>
+                                <label class="form-check-label small <?= (!isset($p['is_available']) || $p['is_available']) ? 'text-success fw-bold' : 'text-muted' ?>" for="avail-<?= $p['id'] ?>">W sklepie</label>
+                            </div>
