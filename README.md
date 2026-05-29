@@ -101,4 +101,4 @@ Po zalogowaniu na konto z rolą `admin` w bazie danych, w menu głównym pojawi 
 
 ## 📅 Status projektu
 
-🔧 **Aktualna faza:** Zakończono
+🔧 **Aktualna faza:** Zakończono 
