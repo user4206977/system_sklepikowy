@@ -27,3 +27,6 @@ if (isset($_POST['update_status'])) {
 if (isset($_POST['delete'])) {
     $stmt = $pdo->prepare("DELETE FROM products WHERE id = ?");
     $stmt->execute([$_POST['product_id']]);
+    header("Location: products.php");
+    exit;
+}
