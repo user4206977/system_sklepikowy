@@ -105,4 +105,4 @@ $logged = isset($_SESSION['user_id']);
         </div>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-4"> 
