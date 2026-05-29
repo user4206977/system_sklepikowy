@@ -30,3 +30,7 @@ if (isset($_POST['delete'])) {
     header("Location: products.php");
     exit;
 }
+
+$products = $pdo->query("SELECT * FROM products ORDER BY id DESC")->fetchAll();
+include '../includes/header.php'; 
+?>
