@@ -15,12 +15,15 @@ include 'includes/header.php';
     <?php 
     $stmt = $pdo->query("SELECT * FROM products WHERE is_promoted = 1");
     while($p = $stmt->fetch()): 
-        // Sprawdzamy czy produkt jest dostępny (domyślnie tak, jeśli brakuje kolumny)
         $is_available = !isset($p['is_available']) || $p['is_available'];
+        $image_path = !empty($p['image']) ? $p['image'] : 'images/default.png';
     ?>
     <div class="col-6 col-md-3 product-item" data-name="<?= strtolower($p['name']) ?>">
         <div class="card h-100 product-card shadow-sm border-0 <?= $is_available ? 'bg-white' : 'bg-light opacity-75' ?>" <?= !$is_available ? 'style="filter: grayscale(0.4);"' : '' ?>>
             <div class="promo-tag <?= $is_available ? 'bg-danger' : 'bg-secondary' ?>">PROMOCJA</div>
+            
+            <img src="<?= htmlspecialchars($image_path) ?>" class="card-img-top" alt="<?= htmlspecialchars($p['name']) ?>" style="height: 180px; object-fit: cover;">
+            
             <div class="card-body p-4 text-center">
                 <h6 class="fw-bold mb-3 <?= $is_available ? '' : 'text-muted text-decoration-line-through' ?>"><?= $p['name'] ?></h6>
                 <div class="d-flex justify-content-between align-items-center">
@@ -55,9 +58,13 @@ include 'includes/header.php';
     
     while($p = $stmt->fetch()): 
         $is_available = !isset($p['is_available']) || $p['is_available'];
+        $image_path = !empty($p['image']) ? $p['image'] : 'images/default.png';
     ?>
     <div class="col-6 col-md-3 product-item" data-name="<?= strtolower($p['name']) ?>">
         <div class="card h-100 product-card shadow-sm border-0 <?= $is_available ? 'bg-white' : 'bg-light opacity-75' ?>" <?= !$is_available ? 'style="filter: grayscale(0.4);"' : '' ?>>
+            
+            <img src="<?= htmlspecialchars($image_path) ?>" class="card-img-top" alt="<?= htmlspecialchars($p['name']) ?>" style="height: 180px; object-fit: cover;">
+            
             <div class="card-body p-4 text-center">
                 <h6 class="fw-bold mb-3 <?= $is_available ? '' : 'text-muted text-decoration-line-through' ?>"><?= $p['name'] ?></h6>
                 <div class="d-flex justify-content-between align-items-center">
@@ -118,7 +125,6 @@ function addToCart(id, name, price, event) {
     cart.push({id, name, price});
     updateUI();
 
-    // Animacja przycisku
     const btn = event.currentTarget;
     const icon = btn.querySelector('i');
     
@@ -141,7 +147,6 @@ function removeFromCart(index) {
     updateUI();
 }
 
-// Inicjalizacja koszyka na start i szukajka
 updateUI();
 
 document.getElementById('searchInput').addEventListener('input', (e) => {
