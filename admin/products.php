@@ -53,3 +53,6 @@ include '../includes/header.php';
                     <span class="input-group-text rounded-end-pill">zł</span>
                 </div>
             </div>
+            <div class="col-md-3">
+                <input type="file" name="image" class="form-control rounded-pill" accept="image/*" title="Wybierz zdjęcie produktu (opcjonalnie)">
+            </div>
