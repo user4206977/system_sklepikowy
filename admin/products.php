@@ -62,3 +62,6 @@ include '../includes/header.php';
                     <label class="form-check-label fw-bold text-danger" for="p">🔥 Promocja</label>
                 </div>
             </div>
+            <div class="col-md-2">
+                <button name="add" class="btn btn-success w-100 btn-rounded fw-bold py-2 shadow-sm">Dodaj</button>
+            </div>
