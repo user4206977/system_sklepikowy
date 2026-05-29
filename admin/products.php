@@ -39,3 +39,6 @@ include '../includes/header.php';
     <h2 class="fw-bold"><i class="bi bi-egg-fried text-primary me-2"></i>Zarządzanie Produktami</h2>
     <span class="badge bg-primary px-3 py-2 rounded-pill">Panel Sprzedawcy</span>
 </div>
+
+<div class="card shadow-sm border-0 mb-5" style="border-radius: 20px;">
+    <div class="card-body p-4">
