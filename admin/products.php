@@ -9,3 +9,6 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 if (isset($_POST['add'])) {
     $stmt = $pdo->prepare("INSERT INTO products (name, price, is_promoted, is_available) VALUES (?, ?, ?, 1)");
     $stmt->execute([$_POST['name'], $_POST['price'], isset($_POST['promoted']) ? 1 : 0]);
+    header("Location: products.php");
+    exit;
+}
